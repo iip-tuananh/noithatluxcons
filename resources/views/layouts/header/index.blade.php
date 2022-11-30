@@ -1,4 +1,5 @@
-<header style="background: linear-gradient(0deg,#828383 0%,rgb(197 197 197) 50%,#828383 100%);">
+{{-- <header style="background: linear-gradient(0deg,#828383 0%,rgb(197 197 197) 50%,#828383 100%);"> --}}
+<header style="background-color: #2b4c4b;">
    <div class="header-menu">
       <div class="container">
          <div class="content">
@@ -34,13 +35,13 @@
                      @endforeach
                      <li class="pages-news">
                         <a href="{{route('listService')}}" >Báo giá</a> 
-                        <ul>
+                        {{-- <ul>
                            @foreach ($servicehome as $item)
                               <li class="">
                                  <a href="{{route('serviceDetail',['slug'=>$item->slug])}}">{{$item->name}}</a>                                         
                               </li>
                            @endforeach
-                        </ul>
+                        </ul> --}}
                      </li>
                      <li class="pages-news">
                         <a href="{{route('allListBlog')}}" >Góc tư vấn</a> 
@@ -113,13 +114,13 @@
             @endforeach
             <li>
                <a href="{{route('listService')}}" >Báo giá</a>
-               <ul>
+               {{-- <ul>
                   @foreach ($servicehome as $item)
                   <li>
                      <a href="{{route('serviceDetail',['slug'=>$item->slug])}}">{{$item->name}}</a>                             
                   </li>
                   @endforeach
-               </ul>                 
+               </ul>                  --}}
             </li>
             <li>
                <a href="{{route('allListBlog')}}" >Góc tư vấn</a>

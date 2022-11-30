@@ -39,6 +39,7 @@
       <link rel="stylesheet" href="{{asset('frontend/css/cust.css')}}"/>
       <link rel="stylesheet" href="{{asset('frontend/css/loban.css')}}"/>
       <link rel="stylesheet" href="{{asset('frontend/css/slick.min.css')}}"/>
+      @yield('css')
    </head>
    <body>
       @include('layouts.header.index')

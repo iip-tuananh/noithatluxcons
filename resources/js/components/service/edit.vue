@@ -6,7 +6,7 @@
             <div class="card-body">
               
               <div class="form-group">
-                <label>Tên dịch vụ</label>
+                <label>Tên báo giá</label>
                 <vs-input
                   type="text"
                   size="default"
@@ -44,6 +44,16 @@
               <div class="form-group">
                 <label>Ảnh đại diện</label>
                 <image-upload v-model="objData.image" type="avatar" :title="'service-'"></image-upload>
+              </div>
+              <div class="form-group">
+                <label>Báo giá /m2</label>
+                <vs-input
+                  type="number"
+                  size="default"
+                  icon="all_inclusive"
+                  class="w-100"
+                  v-model="objData.price"
+                />
               </div>
             </div>
           </div>
@@ -109,7 +119,8 @@ export default {
           }
         ],
         status: 1,
-        image: ""
+        image: "",
+        price: 0
       },
       lang:[]
     };
