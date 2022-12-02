@@ -109,7 +109,7 @@
          <div class="container-fluid">
             @foreach ($cate->product as $product)
             @php
-               $imgs = json_decode($product->images);
+               $imgs = json_decode($product['images']);
             @endphp
             <div class="item">
                <div class="row mt-3">
@@ -121,12 +121,12 @@
                            <div class="col-md-6 col-sm-6 col-6">
                               <div class="item-small wow fadeIn" data-wow-delay=".4s">
                                  <div class="avarta box first">
-                                    <a href="{{route('detailProduct',['cate'=>$product->cate_slug,'slug'=>$product->slug])}}" >
+                                    <a href="{{route('detailProduct',['cate'=>$product['cate_slug'],'slug'=>$product['slug']])}}" >
                                     <img
                                     src="{{$img}}"
                                     class="img-fluid"
                                     width="100%"
-                                    alt="{{languageName($product->name)}}">
+                                    alt="{{languageName($product['name'])}}">
                                     </a>
                                  </div>
                               </div>
@@ -139,18 +139,18 @@
                   <div class="col-md-6 col-big">
                      <div class="big wow fadeIn" data-wow-delay="2s">
                         <div class="avarta">
-                           <a href="{{route('detailProduct',['cate'=>$product->cate_slug,'slug'=>$product->slug])}}">
+                           <a href="{{route('detailProduct',['cate'=>$product['cate_slug'],'slug'=>$product['slug']])}}">
                               <img
                               src="{{$imgs[0]}}"
                               class="img-fluid"
-                              width="100%" alt="{{languageName($product->name)}}">
+                              width="100%" alt="{{languageName($product['name'])}}">
                            </a>
                         </div>
                         <div class="info box first">
                            <h3>
-                              <a href="{{route('detailProduct',['cate'=>$product->cate_slug,'slug'=>$product->slug])}}">{{languageName($product->name)}}</a>
+                              <a href="{{route('detailProduct',['cate'=>$product['cate_slug'],'slug'=>$product['slug']])}}">{{languageName($product['name'])}}</a>
                            </h3>
-                           <div class="linea">{!!languageName($product->description)!!}</div>
+                           <div class="linea">{!!languageName($product['description'])!!}</div>
                         </div>
                      </div>
                   </div>
@@ -163,7 +163,7 @@
          <div class="container">
             @foreach ($cate->product as $k => $product)
             @php
-               $imgs = json_decode($product->images);
+               $imgs = json_decode($product['images']);
             @endphp
             <div class="item">
                <div class="row">
@@ -172,7 +172,7 @@
                         <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2{{$k}}" >
                            <div class="swiper-wrapper">
                               @foreach ($imgs as $img)
-                              <a class="swiper-slide" href="{{route('detailProduct',['cate'=>$product->cate_slug,'slug'=>$product->slug])}}">
+                              <a class="swiper-slide" href="{{route('detailProduct',['cate'=>$product['cate_slug'],'slug'=>$product['slug']])}}">
                                  <img src="{{$img}}" />
                               </a>
                               @endforeach
@@ -191,9 +191,9 @@
                         </div>
                         <div class="info">
                            <h3>
-                              <a href="{{route('detailProduct',['cate'=>$product->cate_slug,'slug'=>$product->slug])}}">{{languageName($product->name)}}</a>
+                              <a href="{{route('detailProduct',['cate'=>$product['cate_slug'],'slug'=>$product['slug']])}}">{{languageName($product['name'])}}</a>
                            </h3>
-                           <div class="linea">{!!languageName($product->description)!!}</div>
+                           <div class="linea">{!!languageName($product['description'])!!}</div>
                         </div>
                      </div>
                   </div>

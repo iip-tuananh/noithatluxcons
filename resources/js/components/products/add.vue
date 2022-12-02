@@ -48,9 +48,6 @@
                 </div>
               </div>
               <div class="form-group">
-                <PdfUpload />
-              </div>
-              <div class="form-group">
                 <label>Mô tả ngắn</label>
                 <TinyMce
                   v-model="objData.description[0].content"

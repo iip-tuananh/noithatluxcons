@@ -16,6 +16,7 @@ use App\models\Province;
 use App\models\Services;
 use App\models\Promotion;
 use App\models\blog\BlogCategory;
+use Faker\Core\Number;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -54,9 +55,10 @@ class AppServiceProvider extends ServiceProvider
                     $query->with(['typetwo'])->where('status',1)->orderBy('id','DESC')->select('cate_id','id', 'name','avatar','slug','cate_slug'); 
                 }
             ])->where('status',1)->orderBy('id','ASC')->get(['id','name','imagehome','avatar','slug','content','description'])->map(function ($query) {
-                $query->setRelation('product', $query->product->where('status', 1)->where('discountStatus',1)->take(8));
+                $query->setRelation('product', array_values($query->product->where('status', 1)->where('discountStatus',1)->toArray()));
                 return $query;
             });
+            // dd($categoryhome);
             $banner = Banner::where(['status'=>1])->get(['id','image','link','title','description']);
             $cartcontent = session()->get('cart', []);
             $viewold = session()->get('viewoldpro', []);

@@ -128,6 +128,7 @@
          arr.push(pro)
       }
       arr.sort(function(a, b){return b-a});
+      console.log(arr);
       for (let i = 0; i < cate; i++) {
          var project = ".box-project-"+i;
          for (let j = 0; j < arr[0]; j++) {
