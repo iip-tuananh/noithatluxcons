@@ -131,6 +131,7 @@
       for (let i = 0; i < cate; i++) {
          var project = ".box-project-"+i;
          for (let j = 0; j < arr[0]; j++) {
+            console.log(project+" "+".mySwiper2"+j);
             var swiper2 = new Swiper(project+" "+".mySwiper2"+j, {
             loop: false,
             spaceBetween: 10,
