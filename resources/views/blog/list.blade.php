@@ -66,7 +66,9 @@ Tin tức nổi bật và mới nhất
                   @endforeach
                   @endif
                </div>
-               {{$blog->links()}}
+               <div class="text-center">
+                  {{$blog->links()}}
+               </div>
                @else 
                <h3>Nội dung đang cập nhật</h3>
                @endif

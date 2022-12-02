@@ -2,7 +2,7 @@
    <div class="click-top"> <a href="javascript:0"><i class="fa fa-angle-double-up"></i></a> </div>
    <div class="container">
       <div class="content">
-         <div class="logo">
+         {{-- <div class="logo">
             <div class="row">
                <div class="col-md-4 mb-4">
                   <a href="{{route('home')}}">
@@ -43,7 +43,7 @@
                   </form>
                </div>
             </div>
-         </div>
+         </div> --}}
          <div class="info-footer">
             <div class="row">
                <div class="col-lg-5">
@@ -107,5 +107,5 @@
          </div>
       </div>
    </div>
-   <div class="reserved"> <span>© Luxcons Design 2022. Design by <a href="https://sbtsoftware.vn/">SBT Software</a></span> </div>
+   <div class="reserved"> <span>© Luxcons Design 2022. Design by <a class="text-white" href="https://sbtsoftware.vn/">SBT Software</a></span> </div>
 </footer>

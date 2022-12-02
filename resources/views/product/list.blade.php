@@ -61,7 +61,9 @@ Danh sách {{$title}}
                            </div>
                         </div>
                         @endforeach
-                        {{$list->links()}}
+                        <div class="col-md-12 text-center">
+                           {{$list->links()}}
+                        </div>
                         @else
                         <h3>Nội dung đang cập nhật ...</h3>
                         @endif

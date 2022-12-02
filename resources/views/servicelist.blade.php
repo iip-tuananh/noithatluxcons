@@ -17,11 +17,11 @@ Dịch vụ báo giá
     #service {
         margin-top: 0px!important;
         padding-top: 50px;
-        background-image: url({{url('frontend/images/gttk-bg.png')}});
+        background-image: url({{url('frontend/images/gttk-bg.jpg')}});
         background-color: #ededed;
         background-position: 0px 0px;
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: cover;
         background-attachment: fixed;
     }
     #service .container {
@@ -90,7 +90,7 @@ Dịch vụ báo giá
         text-transform: none;
     }
     .color_main {
-        color: #bd0000;
+        color: #2b4c4b;
     }
     #service .content-desc {
         text-align: justify;
@@ -103,7 +103,11 @@ Dịch vụ báo giá
         max-width: 300px;
     }
 
-    @media only screen and (max-width: 600px) {
+    #service .service-content {
+        padding-left: 40px;
+    }
+
+    @media only screen and (max-width: 768px) {
         #service .content div:nth-child(3n) .service-content {
             order: 1;
         }
