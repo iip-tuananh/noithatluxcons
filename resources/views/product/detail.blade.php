@@ -126,7 +126,7 @@ $img = json_decode($product->images);
                $imgs = json_decode($pro->images);
             @endphp
             <div class="item">
-               <div class="row">
+               <div class="row mt-3">
                   <div class="col-md-6 col-small">
                      <div class="small">
                         <div class="row">
