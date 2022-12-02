@@ -161,7 +161,7 @@
       </div>
       <div class="list-project mobile-project" data-pro="{{count($cate->product)}}" data-cate="{{count($categoryhome)}}"> 
          <div class="container">
-            @foreach ($cate->product as $index=>$product)
+            @foreach ($cate->product as $k => $product)
             @php
                $imgs = json_decode($product->images);
             @endphp
@@ -169,7 +169,7 @@
                <div class="row">
                   <div class="col-12">
                      <div class="project-album-image">
-                        <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2{{$index}}" >
+                        <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2{{$k}}" >
                            <div class="swiper-wrapper">
                               @foreach ($imgs as $img)
                               <a class="swiper-slide" href="{{route('detailProduct',['cate'=>$product->cate_slug,'slug'=>$product->slug])}}">
@@ -180,7 +180,7 @@
                            <div class="swiper-button-next"></div>
                            <div class="swiper-button-prev"></div>
                         </div>
-                        <div thumbsSlider="" class="swiper mySwiper mySwiper{{$index}}">
+                        <div thumbsSlider="" class="swiper mySwiper mySwiper{{$k}}">
                            <div class="swiper-wrapper">
                               @foreach ($imgs as $img)
                               <div class="swiper-slide">
