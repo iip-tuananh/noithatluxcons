@@ -99,9 +99,9 @@
       });
    </script>
    <script>
-      var pro = $('.mobile-project').data('pro');
-      for (let j = 0; j < pro; j++) {
-         var swiper2 = new Swiper(".mySwiperPro2"+j, {
+      var prod = $('.mobile-project').data('pro');
+      for (let j = 0; j < prod; j++) {
+         var swiper4 = new Swiper(".mySwiperPro2"+j, {
          loop: false,
          spaceBetween: 10,
          navigation: {
@@ -121,11 +121,16 @@
       }
    </script>
    <script>
-      var pro = $('.mobile-project').data('pro');
+      const arr = [];
       var cate = $('.mobile-project').data('cate');
+      for (let n = 0; n < cate; n++) {
+         var pro = $(".box-project-"+n+" "+".mobile-project").data('pro');
+         arr.push(pro)
+      }
+      arr.sort(function(a, b){return b-a});
       for (let i = 0; i < cate; i++) {
          var project = ".box-project-"+i;
-         for (let j = 0; j < pro; j++) {
+         for (let j = 0; j < arr[0]; j++) {
             var swiper2 = new Swiper(project+" "+".mySwiper2"+j, {
             loop: false,
             spaceBetween: 10,
