@@ -120,6 +120,12 @@ Dịch vụ báo giá
             opacity: .6;
             height: 2px;
         }
+        #service .title-service span:before {
+            left: calc(50% - 16px);
+        }
+        #service .title-service span:after {
+            left: calc(50% - 16px);
+        }
     }
 </style>
 @endsection
@@ -172,25 +178,12 @@ Dịch vụ báo giá
     <div class="container">
         <div class="content">
             <div class="title">
-                <h2><span>Dịch vụ báo giá của Luxcons</span></h2>
+                <h2 class="title-service"><span>Dịch vụ báo giá của Luxcons</span></h2>
             </div>
             @foreach ($list_service as $key=>$service)
             @if ( $key%2 == 0)
             <div class="row">
                 <div class="col-lg-6 col-md-6 service-content">
-                    {{-- <div class="item-service item-hvr">
-                        <div class="inner-item-service">
-                            <div class="img-ser img-hvr">
-                                <a href="{{route('serviceDetail', ['slug'=>$service->slug])}}"><img class="lazy entered loaded" data-src="{{$service->image}}" alt="{{$service->name}}" data-ll-status="loaded" src="{{$service->image}}"></a>
-                            </div>
-                            <div class="content-item-service">
-                                <h3 class="name-item-service"><a href="{{route('serviceDetail', ['slug'=>$service->slug])}}">{{$service->name}}</a></h3>
-                                <div class="intro-item-service desc">
-                                    {!!languageName($service->description)!!}
-                                </div>
-                            </div>
-                        </div>
-                    </div> --}}
                     <div class="aniview animated" data-av-animation="slideInUp" style="opacity: 1;">
                         <h3 class="title is-4 mb-2">{{$service->name}}</h3>
                         <div class="title is-3 color_main">{{number_format($service->price, 0, '', '.')}}/m²</div>
