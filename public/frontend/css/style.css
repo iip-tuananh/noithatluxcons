@@ -192,8 +192,8 @@ header#cate .header-menu ul li ul li a {
 }
 header#cate .header-menu,
 header#cate .header-menu.newClass,  header .menu-mobile.newClass {
-  /*position: fixed;*/
-  background: #fff;
+  position: fixed;
+  background: #2b4c4b;
   width: 100%;
   left: 0;
   top: 0;
