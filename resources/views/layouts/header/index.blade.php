@@ -1,5 +1,5 @@
 {{-- <header style="background: linear-gradient(0deg,#828383 0%,rgb(197 197 197) 50%,#828383 100%);"> --}}
-<header style="background-color: #2b4c4b;" id="header-fixed">
+<header style="background-color: #2b4c4b;" >
    <div class="header-menu">
       <div class="container">
          <div class="content">
@@ -67,7 +67,7 @@
       </div>
    </div>
    <!-- menu-mobile -->
-   <div class="menu-mobile" style="display: none;">
+   <div class="menu-mobile" style="display: none;" id="header-fixed">
       <div class="container">
          <div class="row">
             <div class="col-md-9 col-9 col-sm-9">

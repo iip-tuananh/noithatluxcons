@@ -171,11 +171,11 @@
    </script>
    <style>
       .sticky {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 99999;
-      background-color: white;
+         position: fixed;
+         top: 0;
+         width: 100%;
+         z-index: 99999;
+         background-color: white;
       }
    </style>
    <style>
