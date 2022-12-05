@@ -153,6 +153,31 @@
          }
       }
    </script>
+   <script>
+      if (window.innerWidth < 768) {
+      window.onscroll = function() {myFunction()};
+
+      var header = document.getElementById("header-fixed");
+      var sticky = header.offsetTop;
+
+      function myFunction() {
+      if (window.pageYOffset > sticky) {
+         header.classList.add("sticky");
+      } else {
+         header.classList.remove("sticky");
+      }
+      }
+      }
+   </script>
+   <style>
+      .sticky {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 99999;
+      background-color: white;
+      }
+   </style>
    <style>
       .swiper {
       width: 100%;
