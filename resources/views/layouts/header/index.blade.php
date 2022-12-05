@@ -67,7 +67,7 @@
       </div>
    </div>
    <!-- menu-mobile -->
-   <div class="menu-mobile" style="display: none;" id="header-fixed">
+   <div class="menu-mobile" style="display: none;">
       <div class="container">
          <div class="row">
             <div class="col-md-9 col-9 col-sm-9">
