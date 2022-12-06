@@ -190,8 +190,7 @@ header#cate .header-menu ul li ul li a {
   font-size: 16px;
   text-transform: inherit;
 }
-header#cate .header-menu,
-header#cate .header-menu.newClass,  header .menu-mobile.newClass {
+header#cate .header-menu, header .header-menu.newClass, header .menu-mobile.newClass {
   position: fixed;
   background: #2b4c4b;
   width: 100%;
@@ -200,7 +199,7 @@ header#cate .header-menu.newClass,  header .menu-mobile.newClass {
   box-shadow: 0px 1px 9px 1px #333;
   z-index: 1001;
   transition: .3s all;
-  padding-top: 10px;
+  /* padding-top: 10px; */
 }
 /* 
 header .header-menu {
